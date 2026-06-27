@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion Request | ArrowLogicx Tech Pvt Ltd Kochi</title>
+  <meta name="description" content="Submit a request to delete your ArrowLogicx account and associated personal data, in compliance with Google Play Store and Apple App Store policies.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Background Three.js Canvas Container -->
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <!-- Background Ambient Drifting Orbs Layer -->
+  <div class="ambient-orbs-container" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header id="site-header" class="scrolled">
+    <div class="container nav-container">
+      <a href="./index.html#home" class="logo" id="header-logo" aria-label="Arrowlogicx Tech Home">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 80L50 20L80 80H65L50 50L35 80H20Z" fill="url(#logo-grad-1)"/>
+          <path d="M50 50L60 70H40L50 50Z" fill="url(#logo-grad-2)"/>
+          <defs>
+            <linearGradient id="logo-grad-1" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#14b8a6" />
+              <stop offset="1" stop-color="#6366f1" />
+            </linearGradient>
+            <linearGradient id="logo-grad-2" x1="40" y1="70" x2="60" y2="50" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1" />
+              <stop offset="1" stop-color="#14b8a6" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>ArrowLogicx</span>
+      </a>
+      
+      <!-- Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="./index.html#home" class="nav-link">Home</a></li>
+          <li><a href="./index.html#product" class="nav-link">Maid Platform</a></li>
+          <li><a href="./index.html#agency" class="nav-link">Our Agency</a></li>
+          <li><a href="./privacy.html" class="nav-link">Privacy Policy</a></li>
+          <li><a href="./index.html#signup" class="btn btn-secondary">Get Early Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 8rem;">
+    <section class="legal-page-section">
+      <div class="container">
+        <div class="glass-card legal-card" style="max-width: 700px; margin: 0 auto;">
+          <div class="badge badge-emerald">Data Control Center</div>
+          <h1 class="legal-title">Account & Data Deletion Request</h1>
+          <p class="legal-meta">In compliance with Google Play Store & Apple App Store developer regulations</p>
+          
+          <div class="legal-content">
+            <p>At ArrowLogicx, we respect your data privacy and control rights. In accordance with Google Play's Account Deletion Policy, if you have registered an account on our Instant Maid App, you may request the deletion of your account and all associated personal data using this secure portal.</p>
+            
+            <div style="background: rgba(99, 102, 241, 0.05); border: 1px dashed rgba(99, 102, 241, 0.2); border-radius: var(--radius-md); padding: 1.25rem; margin: 1.5rem 0; font-size: 0.85rem; color: var(--color-text-secondary);">
+              <strong>What data will be permanently deleted?</strong>
+              <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
+                <li>Profile registration data (name, email, phone number, credentials).</li>
+                <li>Stored address coordinates and matching preferences.</li>
+                <li>Payment token records and service histories.</li>
+                <li>For Service Partners: Uploaded police verification logs, KYC checks, and reference records.</li>
+              </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-accent-gold);">Note: Active subscriptions, pending payouts, or uncompleted matching service transactions must be resolved prior to account deletion.</p>
+            </div>
+
+            <!-- Deletion Form -->
+            <form id="data-deletion-form" class="legal-form" novalidate>
+              <div class="legal-form-grid">
+                <div class="form-group-legal">
+                  <label for="del-name">Full Name</label>
+                  <input type="text" id="del-name" class="legal-form-input" placeholder="Your registered name" required>
+                </div>
+                
+                <div class="form-group-legal">
+                  <label for="del-email">Registered Email Address</label>
+                  <input type="email" id="del-email" class="legal-form-input" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group-legal">
+                  <label for="del-phone">Registered Mobile Number</label>
+                  <input type="tel" id="del-phone" class="legal-form-input" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+
+                <div class="form-group-legal">
+                  <label for="del-type">Account Role</label>
+                  <select id="del-type" class="legal-form-input" required>
+                    <option value="" disabled selected>Select account role</option>
+                    <option value="customer">Customer / Client seeking home care</option>
+                    <option value="partner">Service Partner / Cleaner / Cook</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-legal" style="margin-top: 1.25rem;">
+                <label for="del-reason">Reason for Account Deletion (Optional)</label>
+                <textarea id="del-reason" class="legal-form-input" style="height: 100px; resize: none; border-radius: var(--radius-md);" placeholder="Help us improve. Why are you deleting your account?"></textarea>
+              </div>
+
+              <div class="form-group-legal checkbox-group" style="margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <input type="checkbox" id="del-confirm" required style="width: 18px; height: 18px; margin-top: 0.2rem; cursor: pointer; accent-color: var(--color-accent-teal);">
+                <label for="del-confirm" style="font-size: 0.8rem; color: var(--color-text-secondary); cursor: pointer; line-height: 1.4;">
+                  I confirm that I wish to permanently delete my ArrowLogicx account. I understand that this action is irreversible, and all stored credentials, locations, matching logs, and histories will be permanently purged in 14 business days.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="del-submit-btn" style="margin-top: 2rem; width: 100%;">Submit Deletion Request</button>
+            </form>
+
+            <!-- Form messages -->
+            <div id="deletion-form-feedback" class="form-message" style="margin-top: 1.5rem; text-align: center;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-about">
+        <div class="footer-logo">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;">
+            <path d="M20 80L50 20L80 80H65L50 50L35 80H20Z" fill="url(#foot-logo-grad)"/>
+            <defs>
+              <linearGradient id="foot-logo-grad" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#14b8a6" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>ArrowLogicx</span>
+        </div>
+        <p>Arrowlogicx Tech Pvt Ltd is a modern technology integrations agency developing highly localized digital applications for Kerala's growing tech hubs.</p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div>
+        <h3 class="footer-title">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="./index.html#home">Home</a></li>
+          <li><a href="./index.html#product">Maid App Platform</a></li>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact details -->
+      <div class="footer-contact-col">
+        <h3 class="footer-title">Contact Us</h3>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Kunnumpuram, Thrikkakara, Vazhakkala, Kochi, Kakkanad, Kerala 682021</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 90618 36553</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:arrowlogicx@gmail.com">arrowlogicx@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ArrowLogicx Tech Pvt Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./legal.js"></script>
+
+</body>
+</html>

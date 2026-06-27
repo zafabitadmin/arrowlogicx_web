@@ -1295,3 +1295,156 @@ footer {
     text-align: center;
   }
 }
+
+/* ------------------- LEGAL PAGES & DATA DELETION ------------------- */
+.legal-page-section {
+  padding: 4rem 1.5rem 8rem 1.5rem;
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.legal-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+}
+
+.legal-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--color-accent-teal) 0%, var(--color-accent-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.legal-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.legal-content h3 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.legal-content p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.legal-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.legal-content ul li::before {
+  content: "•";
+  color: var(--color-accent-teal);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.legal-content strong {
+  color: var(--color-text-primary);
+}
+
+/* Deletion Request Form Styles */
+.legal-form {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.legal-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-legal label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+.legal-form-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: rgba(8, 12, 20, 0.8);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.legal-form-input:focus {
+  border-color: var(--color-accent-violet);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+select.legal-form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='16' height='16' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  padding-right: 2.5rem;
+}
+
+select.legal-form-input option {
+  background: var(--bg-secondary);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .legal-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .legal-title {
+    font-size: 2.2rem;
+  }
+  
+  .legal-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
