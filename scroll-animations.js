@@ -35,29 +35,22 @@ export function initScrollAnimations() {
       ease: 'back.out(1.2)'
     }, '-=1.2');
 
-  gsap.to('.hero-svg-illustration', {
-    y: 60,
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true
-    }
-  });
-
   // 2. Bento Grid Cards Entrance (Staggered Fade-Up)
-  gsap.from('.bento-card', {
-    scrollTrigger: {
-      trigger: '.bento-grid',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 50,
-    stagger: 0.12,
-    duration: 0.8,
-    ease: 'power3.out'
-  });
+  gsap.fromTo('.bento-card', 
+    { opacity: 0, y: 50 },
+    {
+      scrollTrigger: {
+        trigger: '.bento-grid',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      y: 0,
+      stagger: 0.12,
+      duration: 0.8,
+      ease: 'power3.out'
+    }
+  );
 
   // Stat numbers counting simulation
   ScrollTrigger.create({
@@ -90,57 +83,72 @@ export function initScrollAnimations() {
   });
 
   // 3. Agency Section Animations
-  gsap.from('.agency-description h3, .agency-description p, .agency-section .badge', {
-    scrollTrigger: {
-      trigger: '.agency-section',
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.15,
-    duration: 1,
-    ease: 'power3.out'
-  });
+  gsap.fromTo('.agency-description h3, .agency-description p, .agency-section .badge', 
+    { opacity: 0, y: 30 },
+    {
+      scrollTrigger: {
+        trigger: '.agency-section',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      y: 0,
+      stagger: 0.15,
+      duration: 1,
+      ease: 'power3.out'
+    }
+  );
 
-  gsap.from('.cap-card', {
-    scrollTrigger: {
-      trigger: '.agency-capabilities',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.15,
-    duration: 0.8,
-    ease: 'power2.out'
-  });
+  gsap.fromTo('.cap-card', 
+    { opacity: 0, y: 30 },
+    {
+      scrollTrigger: {
+        trigger: '.agency-capabilities',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      y: 0,
+      stagger: 0.15,
+      duration: 0.8,
+      ease: 'power2.out'
+    }
+  );
 
   // 4. FAQ Section Animations
-  gsap.from('.faq-item', {
-    scrollTrigger: {
-      trigger: '.faq-container',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 20,
-    stagger: 0.15,
-    duration: 0.8,
-    ease: 'power2.out'
-  });
+  gsap.fromTo('.faq-item', 
+    { opacity: 0, y: 20 },
+    {
+      scrollTrigger: {
+        trigger: '.faq-container',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      y: 0,
+      stagger: 0.15,
+      duration: 0.8,
+      ease: 'power2.out'
+    }
+  );
 
   // 5. Early Access Card Animations
-  gsap.from('.cta-card', {
-    scrollTrigger: {
-      trigger: '.cta-section',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    scale: 0.95,
-    y: 30,
-    duration: 1,
-    ease: 'power3.out'
-  });
+  gsap.fromTo('.cta-card', 
+    { opacity: 0, scale: 0.95, y: 30 },
+    {
+      scrollTrigger: {
+        trigger: '.cta-section',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power3.out'
+    }
+  );
+
+  // Refresh ScrollTrigger calculations after initial layout load
+  ScrollTrigger.refresh();
 }

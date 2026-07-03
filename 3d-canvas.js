@@ -57,11 +57,11 @@ export function init3DCanvas() {
     
     const grad = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
     grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    // 50/50 chance for electric violet vs teal glow
+    // 50/50 chance for electric sky blue vs neon green glow
     if (Math.random() > 0.5) {
-      grad.addColorStop(0.35, 'rgba(99, 102, 241, 0.7)'); // Violet
+      grad.addColorStop(0.35, 'rgba(14, 165, 233, 0.7)'); // Sky Blue
     } else {
-      grad.addColorStop(0.35, 'rgba(20, 184, 166, 0.7)'); // Teal
+      grad.addColorStop(0.35, 'rgba(6, 228, 135, 0.7)'); // Neon Green
     }
     grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
@@ -86,7 +86,7 @@ export function init3DCanvas() {
 
   // Constellation wireframe connectors styled under Indigo colorway
   const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0x6366f1,
+    color: 0x06e487,
     transparent: true,
     opacity: 0.05
   });
