@@ -23,7 +23,7 @@ export function init3DCanvas() {
   container.appendChild(renderer.domElement);
 
   // Geometry: Create a floating wave of particles
-  const particleCount = 550;
+  const particleCount = 350;
   const geometry = new THREE.BufferGeometry();
   const positions = new Float32Array(particleCount * 3);
   const initialPositions = [];
@@ -56,12 +56,12 @@ export function init3DCanvas() {
     const ctx = canvas.getContext('2d');
     
     const grad = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-    grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+    grad.addColorStop(0, 'rgba(255, 255, 255, 0.9)');
     // 50/50 chance for electric sky blue vs neon green glow
     if (Math.random() > 0.5) {
-      grad.addColorStop(0.35, 'rgba(14, 165, 233, 0.7)'); // Sky Blue
+      grad.addColorStop(0.35, 'rgba(14, 165, 233, 0.45)'); // Sky Blue
     } else {
-      grad.addColorStop(0.35, 'rgba(6, 228, 135, 0.7)'); // Neon Green
+      grad.addColorStop(0.35, 'rgba(6, 228, 135, 0.45)'); // Neon Green
     }
     grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
@@ -73,7 +73,7 @@ export function init3DCanvas() {
 
   // Material
   const material = new THREE.PointsMaterial({
-    size: 0.65,
+    size: 0.5,
     map: createParticleTexture(),
     transparent: true,
     blending: THREE.AdditiveBlending,

@@ -1,8 +1,17 @@
+import { init3DCanvas } from './3d-canvas.js';
+import { initScrollAnimations } from './scroll-animations.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   setupStickyHeader();
   setupMobileNavigation();
   setupFAQAccordion();
   setupSignupForm();
+  setupScrollToTop();
+  setupLocationRequest();
+
+  // Initialize premium visual effects
+  init3DCanvas();
+  initScrollAnimations();
 });
 
 /* ── Sticky Header ── */
@@ -119,15 +128,20 @@ function setupSignupForm() {
     }
 
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Joining...';
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnSpinner = submitBtn.querySelector('.btn-spinner');
+
+    if (btnText) btnText.textContent = 'Joining...';
+    if (btnSpinner) btnSpinner.style.display = 'inline-block';
     submitBtn.disabled = true;
 
     setTimeout(() => {
       feedback.textContent = "You're on the list. We'll be in touch.";
       feedback.classList.add('success');
       emailInput.value = '';
-      submitBtn.textContent = originalText;
+
+      if (btnText) btnText.textContent = 'Join Waitlist';
+      if (btnSpinner) btnSpinner.style.display = 'none';
       submitBtn.disabled = false;
 
       setTimeout(() => {
@@ -137,3 +151,58 @@ function setupSignupForm() {
     }, 1000);
   });
 }
+
+/* ── Scroll to Top ── */
+function setupScrollToTop() {
+  const btn = document.getElementById('scroll-top-btn');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ── Location Request Form ── */
+function setupLocationRequest() {
+  const form = document.getElementById('location-request-form');
+  const feedback = document.getElementById('location-form-feedback');
+  const input = document.getElementById('location-input');
+
+  if (!form || !feedback || !input) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const location = input.value.trim();
+
+    feedback.className = 'form-message';
+    feedback.textContent = '';
+
+    if (!location) {
+      feedback.textContent = 'Please enter a neighborhood name.';
+      feedback.classList.add('error');
+      return;
+    }
+
+    const btn = form.querySelector('button');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      feedback.textContent = `Thanks! We've noted your interest in ${location}.`;
+      feedback.classList.add('success');
+      input.value = '';
+      btn.textContent = 'Request';
+      btn.disabled = false;
+
+      setTimeout(() => {
+        feedback.textContent = '';
+        feedback.className = 'form-message';
+      }, 5000);
+    }, 800);
+  });
+}
+

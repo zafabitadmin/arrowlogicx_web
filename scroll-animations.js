@@ -82,28 +82,29 @@ export function initScrollAnimations() {
     }
   });
 
-  // 3. Agency Section Animations
-  gsap.fromTo('.agency-description h3, .agency-description p, .agency-section .badge', 
+  // 3. Trust Section Stats Counter
+  gsap.fromTo('.trust-stat', 
     { opacity: 0, y: 30 },
     {
       scrollTrigger: {
-        trigger: '.agency-section',
-        start: 'top 75%',
+        trigger: '.trust-section',
+        start: 'top 85%',
         toggleActions: 'play none none none'
       },
       opacity: 1,
       y: 0,
-      stagger: 0.15,
-      duration: 1,
+      stagger: 0.2,
+      duration: 0.8,
       ease: 'power3.out'
     }
   );
 
-  gsap.fromTo('.cap-card', 
-    { opacity: 0, y: 30 },
+  // 3b. Step Cards Entrance
+  gsap.fromTo('.step-card', 
+    { opacity: 0, y: 40 },
     {
       scrollTrigger: {
-        trigger: '.agency-capabilities',
+        trigger: '.steps-grid',
         start: 'top 80%',
         toggleActions: 'play none none none'
       },
@@ -111,7 +112,24 @@ export function initScrollAnimations() {
       y: 0,
       stagger: 0.15,
       duration: 0.8,
-      ease: 'power2.out'
+      ease: 'power3.out'
+    }
+  );
+
+  // 3c. Location Chips Entrance
+  gsap.fromTo('.location-chip', 
+    { opacity: 0, scale: 0.9 },
+    {
+      scrollTrigger: {
+        trigger: '.locations-section',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 1,
+      scale: 1,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: 'back.out(1.5)'
     }
   );
 
