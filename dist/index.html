@@ -3,45 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zafabit | On-Demand House Help in Kochi, Kerala</title>
+  <title>ArrowLogicx | Hyper-Local Consumer Platforms</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Zafabit by ArrowLogicx Tech is the premier on-demand house help app in Kochi, Kerala. Book verified helper partners for sweeping, mopping, utensil washing, and kitchen prep. Launching soon in Kakkanad, Vazhakkala, and Edappally.">
-  <meta name="keywords" content="Zafabit, house help Kochi, maid service Kakkanad, home cleaning Kerala, ArrowLogicx Tech, domestic help Vazhakkala, on-demand chores Kochi Ernakulam, daily helper partners Kochi Kerala">
-  <meta name="author" content="Arrowlogicx Tech Pvt Ltd">
+  <meta name="description" content="ArrowLogicx Tech Pvt Ltd builds, runs, and operates hyper-local consumer service platforms, starting with our flagship brand Zafabit.">
+  <meta name="keywords" content="ArrowLogicx, ArrowLogicx Tech, Zafabit, house help Kochi, home chores, Kochi, Kerala">
+  <meta name="author" content="ArrowLogicx Tech Pvt Ltd">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arrowlogicx.tech/">
-  <meta property="og:title" content="Zafabit | On-Demand House Help in Kochi, Kerala">
-  <meta property="og:description" content="Book verified house help for daily chores in Kochi, Kerala. Get matched in minutes for sweeping, mopping, utensils, and kitchen prep.">
+  <meta property="og:title" content="ArrowLogicx | Hyper-Local Consumer Platforms">
+  <meta property="og:description" content="We build, run, and operate hyper-local consumer platforms designed to simplify daily household living, starting with Zafabit.">
   <meta property="og:image" content="https://arrowlogicx.tech/assets/og-image.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://arrowlogicx.tech/">
-  <meta property="twitter:title" content="Zafabit | On-Demand House Help in Kochi, Kerala">
-  <meta property="twitter:description" content="Book verified house help for daily chores in Kochi, Kerala. Get matched in minutes for sweeping, mopping, utensils, and kitchen prep.">
+  <meta property="twitter:title" content="ArrowLogicx | Hyper-Local Consumer Platforms">
+  <meta property="twitter:description" content="We build, run, and operate hyper-local consumer platforms designed to simplify daily household living, starting with Zafabit.">
   <meta property="twitter:image" content="https://arrowlogicx.tech/assets/og-image.png">
 
   <link rel="icon" type="image/png" href="/assets/favicon-CdSSekRY.png">
   <link rel="apple-touch-icon" href="/assets/favicon-CdSSekRY.png">
-  <script type="module" crossorigin src="/assets/main-BrWevDGI.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/three-OLAToGA8.js">
-  <link rel="stylesheet" crossorigin href="/assets/style-BpoHuSVY.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script type="module" crossorigin src="/assets/three-OLAToGA8.js"></script>
+  <script type="module" crossorigin src="/assets/main-1mpqRfyY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-C4m12P6c.css">
 </head>
-<body>
+<body class="arrowlogicx-page">
   <div id="canvas-container"></div>
 
   <!-- Header -->
   <header id="site-header">
     <div class="container nav-container">
-      <a href="#home" class="logo" id="header-logo" aria-label="Arrowlogicx Tech Home">
+      <a href="#home" class="logo" id="header-logo" aria-label="ArrowLogicx Home">
         <img src="/assets/logo-COja7AKc.png" alt="ArrowLogicx Logo" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='block';" style="height: 26px; width: auto;" />
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg-fallback" style="display: none; width: 26px; height: 26px;">
-          <path d="M 18 72 L 43 47" stroke="#ebdcc8" stroke-width="16" stroke-linecap="round"/>
-          <path d="M 57 57 L 82 32" stroke="#ebdcc8" stroke-width="16" stroke-linecap="round"/>
+          <path d="M 18 72 L 43 47" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+          <path d="M 57 57 L 82 32" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
           <path d="M 37 22 L 65 50 L 37 78" stroke="#10b981" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
         <span>ArrowLogicx</span>
@@ -50,7 +51,9 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu" id="nav-menu-list">
           <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#businesses" class="nav-link" id="nav-businesses">Our Businesses</a></li>
           <li><a href="#how" class="nav-link" id="nav-how">How It Works</a></li>
+          <li><a href="#platform" class="nav-link" id="nav-platform">Platform</a></li>
           <li><a href="#locations" class="nav-link" id="nav-locations">Locations</a></li>
           <li><a href="#faq" class="nav-link" id="nav-faq">FAQ</a></li>
           <li><a href="#signup" class="btn btn-primary" id="nav-signup-cta">Get Early Access</a></li>
@@ -66,32 +69,62 @@
   </header>
 
   <main>
-
-    <!-- ── Hero ── -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-tag badge">
-            <span class="tag-dot"></span>
-            Launching in Kochi, Kerala
+    <!-- - Hero - -->
+    <section class="arrowlogicx-hero" id="home">
+      <div class="container">
+        <h1 class="hero-headline" id="hero-headline">
+          ArrowLogicx builds and operates platforms designed to power <em>daily household convenience</em>.
+        </h1>
+        <div class="hero-meta" id="hero-meta">
+          <div class="meta-tagline">
+            We operate hyper-local consumer platforms focused on reliability, vetted execution, and community integration. Starting with our flagship app, Zafabit.
           </div>
-          <h1 id="hero-title">Your home chores, handled by <span class="zafabit-brand">Zafabit</span>.</h1>
-          <p>Book verified helpers in Kochi, Kerala for sweeping, mopping, utensil washing, and kitchen prep. Get matched to your household in minutes.</p>
-          <div class="hero-actions">
-            <a href="#signup" class="btn btn-primary" id="hero-cta-primary">Get Early Access</a>
-            <a href="#how" class="btn btn-secondary" id="hero-cta-secondary">See How It Works</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="device-frame">
-            <div class="device-notch"></div>
-            <img src="/assets/app-screen-s-iHFPu2.png" alt="Zafabit App Preview" class="hero-mockup-img" />
+          <div class="meta-location">
+            <span class="location-dot"></span>
+            Kochi, Kerala
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── How It Works ── -->
+    <!-- - Our Businesses (Flagship Venture) - -->
+    <section class="arrowlogicx-businesses" id="businesses">
+      <div class="container">
+        <h2 class="section-header">Our flagship venture</h2>
+        <p class="section-desc">At the core of ArrowLogicx is our flagship platform that brings verified domestic help to households in Kerala.</p>
+        
+        <div class="portfolio-container">
+          <!-- Featured Business: Zafabit -->
+          <div class="business-card" id="zafabit-portfolio-card">
+            <div class="business-card-info">
+              <div class="business-card-logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+                  <path d="M 18 72 L 43 47" stroke="#ebdcc8" stroke-width="16" stroke-linecap="round"/>
+                  <path d="M 57 57 L 82 32" stroke="#ebdcc8" stroke-width="16" stroke-linecap="round"/>
+                  <path d="M 37 22 L 65 50 L 37 78" stroke="rgb(90, 41, 137)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <span class="zafabit-brand">Zafabit</span>
+              </div>
+              <p class="business-card-desc">
+                The premier on-demand house help platform in Kochi, Kerala. Matches households with background-checked helper partners for sweeping, mopping, utensil washing, and kitchen prep in minutes.
+              </p>
+              <div class="business-card-tags">
+                <span>On-Demand Chores</span>
+                <span>Verified Helpers</span>
+                <span>Kochi, Ernakulam</span>
+              </div>
+            </div>
+            <div class="business-card-cta">
+              <a href="#how" class="btn btn-primary">Learn More Below ↓</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- - ZAFABIT PRODUCT DETAILS (Referencing previous page content) - -->
+    
+    <!-- How It Works -->
     <section class="how-section" id="how">
       <div class="container">
         <div class="section-label">How It Works</div>
@@ -118,7 +151,7 @@
       </div>
     </section>
 
-    <!-- ── Social Proof / Trust Signals ── -->
+    <!-- Trust / Waitlist Stats -->
     <section class="trust-section" id="trust">
       <div class="container">
         <div class="trust-grid">
@@ -140,7 +173,7 @@
       </div>
     </section>
 
-    <!-- ── Platform Showcase Bento Grid ── -->
+    <!-- Bento Platform Grid -->
     <section class="bento-section" id="platform">
       <div class="container">
         <div class="section-label">The Platform</div>
@@ -186,7 +219,7 @@
           <!-- Card 4: Transparent Pricing (full-width) -->
           <div class="bento-card bento-pricing">
             <div class="bento-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12"/><path d="M6 8h12"/><path d="M6 13a4 4 0 0 1 0-8"/><path d="M6 13h3"/><path d="M9 13 18 22"/></svg>
             </div>
             <div>
               <h3>Transparent pricing</h3>
@@ -197,7 +230,7 @@
       </div>
     </section>
 
-    <!-- ── Available In ── -->
+    <!-- Available In -->
     <section class="locations-section" id="locations">
       <div class="container">
         <div class="section-label">Available In</div>
@@ -205,38 +238,16 @@
         <p class="section-subtitle">We're rolling out across Kochi, one neighborhood at a time.</p>
 
         <div class="locations-grid">
-          <div class="locations-map-visual">
-            <div class="map-pin active" style="top: 30%; left: 55%;" title="Kakkanad">
-              <span class="pin-pulse"></span>
-              <span class="pin-label">Kakkanad</span>
-            </div>
-            <div class="map-pin active" style="top: 38%; left: 48%;" title="Edachira">
-              <span class="pin-pulse"></span>
-              <span class="pin-label">Edachira</span>
-            </div>
-            <div class="map-pin active" style="top: 45%; left: 42%;" title="Vazhakkala">
-              <span class="pin-pulse"></span>
-              <span class="pin-label">Vazhakkala</span>
-            </div>
-            <div class="map-pin soon" style="top: 55%; left: 35%;" title="Edappally">
-              <span class="pin-label">Edappally</span>
-            </div>
-            <div class="map-pin soon" style="top: 65%; left: 50%;" title="Marine Drive">
-              <span class="pin-label">Marine Drive</span>
-            </div>
-            <div class="map-pin soon" style="top: 60%; left: 62%;" title="Vytilla">
-              <span class="pin-label">Vytilla</span>
-            </div>
-          </div>
+          <div class="locations-map-visual" id="map"></div>
 
           <div class="locations-info">
             <div class="locations-list">
-              <div class="location-chip active"><span class="chip-dot"></span> Kakkanad</div>
-              <div class="location-chip active"><span class="chip-dot"></span> Edachira</div>
-              <div class="location-chip active"><span class="chip-dot"></span> Vazhakkala</div>
-              <div class="location-chip soon"><span class="chip-dot"></span> Edappally (coming soon)</div>
-              <div class="location-chip soon"><span class="chip-dot"></span> Marine Drive (coming soon)</div>
-              <div class="location-chip soon"><span class="chip-dot"></span> Vytilla (coming soon)</div>
+              <div class="location-chip active" data-location="kakkanad"><span class="chip-dot"></span> Kakkanad</div>
+              <div class="location-chip active" data-location="edachira"><span class="chip-dot"></span> Edachira</div>
+              <div class="location-chip active" data-location="vazhakkala"><span class="chip-dot"></span> Vazhakkala</div>
+              <div class="location-chip soon" data-location="edappally"><span class="chip-dot"></span> Edappally (coming soon)</div>
+              <div class="location-chip soon" data-location="marinedrive"><span class="chip-dot"></span> Marine Drive (coming soon)</div>
+              <div class="location-chip soon" data-location="vytilla"><span class="chip-dot"></span> Vytilla (coming soon)</div>
             </div>
 
             <div class="location-request">
@@ -252,7 +263,7 @@
       </div>
     </section>
 
-    <!-- ── FAQ ── -->
+    <!-- FAQ -->
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="section-label">FAQ</div>
@@ -310,7 +321,7 @@
       </div>
     </section>
 
-    <!-- ── Early Access CTA ── -->
+    <!-- Early Access Waitlist -->
     <section class="cta-section" id="signup">
       <div class="cta-card">
         <div class="cta-badge">Limited Beta Spots</div>
@@ -327,7 +338,6 @@
         <p class="cta-social-proof">Join 500+ families already on the waitlist</p>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -335,20 +345,34 @@
     <div class="container footer-grid">
       <div class="footer-about">
         <div class="footer-logo">
-          <img src="/assets/logo-COja7AKc.png" alt="ArrowLogicx Logo" onerror="this.style.display='none';" style="height: 22px; width: auto;" />
+          <img src="/assets/logo-COja7AKc.png" alt="ArrowLogicx Logo" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='block';" style="height: 22px; width: auto;" />
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg-fallback" style="display: none; width: 22px; height: 22px;">
+            <path d="M 18 72 L 43 47" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+            <path d="M 57 57 L 82 32" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+            <path d="M 37 22 L 65 50 L 37 78" stroke="rgb(90, 41, 137)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
           <span>ArrowLogicx</span>
         </div>
-        <p>Building Zafabit, the premier on-demand house help application for families in Kochi, Kerala.</p>
+        <p>Operating hyper-local consumer service platforms designed to simplify daily household living, starting with Zafabit.</p>
       </div>
 
       <div>
-        <h3 class="footer-title">Links</h3>
+        <h3 class="footer-title">Zafabit</h3>
         <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
           <li><a href="#how">How It Works</a></li>
+          <li><a href="#platform">The Platform</a></li>
+          <li><a href="#locations">Available Locations</a></li>
+          <li><a href="#faq">Common FAQs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
           <li><a href="./privacy.html">Privacy Policy</a></li>
           <li><a href="./terms.html">Terms of Service</a></li>
-          <li><a href="./deletion.html">Delete My Account</a></li>
+          <li><a href="./deletion.html">Delete Account</a></li>
+          <li><a href="./refund.html">Refund Policy</a></li>
         </ul>
       </div>
 
@@ -374,11 +398,8 @@
     <div class="container footer-bottom">
       <p>&copy; 2026 ArrowLogicx Tech Pvt Ltd. All rights reserved.</p>
       <div class="social-links">
-        <a href="#" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <a href="mailto:arrowlogicx@gmail.com" aria-label="Email Us">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </a>
       </div>
     </div>
@@ -389,6 +410,6 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>

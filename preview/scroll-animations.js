@@ -1,5 +1,5 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'https://esm.sh/gsap@3.12.5';
+import { ScrollTrigger } from 'https://esm.sh/gsap@3.12.5/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 

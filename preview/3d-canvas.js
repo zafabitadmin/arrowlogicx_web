@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://esm.sh/three@0.160.0';
 
 export function init3DCanvas() {
   const container = document.getElementById('canvas-container');
