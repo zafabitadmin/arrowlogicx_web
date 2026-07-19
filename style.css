@@ -21,8 +21,8 @@
   --color-text-muted: #94a3b8;
 
   --tw-bg-opacity: 1;
-  --color-brand: rgb(90 41 137 / var(--tw-bg-opacity));
-  --color-brand-glow: rgb(90 41 137 / 0.12);
+  --color-brand: #D400FF;
+  --color-brand-glow: rgba(212, 0, 255, 0.12);
   --color-accent-green: #10b981;   /* Emerald accent */
   --color-accent-gold: #f59e0b;
 

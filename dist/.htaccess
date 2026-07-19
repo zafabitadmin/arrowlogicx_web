@@ -1,0 +1,32 @@
+# 1. Enforce HTTPS Redirection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 2. Block Directory Browsing
+Options -Indexes
+
+# 3. HTTP Strict Transport Security (HSTS)
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+# 4. Site-Wide Security Headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking (embedding in frame)
+    Header set X-Frame-Options "DENY"
+
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Control referrer policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict device features (permissions policy)
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+
+    # Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://unpkg.com https://*.basemaps.cartocdn.com; connect-src 'self'; frame-src 'none';"
+</IfModule>
